@@ -1,0 +1,23 @@
+<div class="box" id="users-list-box">
+    <div class="box-header">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#usersModal" id="add-user-btn">Add User</button>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table class="table table-bordered">
+            <tr>
+                <th style="width: 10px">#</th>
+                <th>User Name</th>  
+                <th style="width: 100px">Tags</th>
+            </tr>
+            <!-- list container -- check users-list.art -->
+            <tbody id="users-list"></tbody>
+        </table>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer clearfix" id="users-footer">
+        <!-- pagination/navigation buttons ---check users-list-nav.art -->
+    </div>
+</div>
+<!-- /.box -->
+
