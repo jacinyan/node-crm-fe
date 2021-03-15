@@ -15,6 +15,7 @@ const _handleSubmit = (router) => {
         e.preventDefault()
         const data = $('#login').serialize()
         let {jqXHR, result} =  await loginService(data)
+        console.log(jqXHR, result);
         const token = await jqXHR.getResponseHeader('X-Access-Token')
             console.log(token);
             localStorage.setItem('crm-token', token)
