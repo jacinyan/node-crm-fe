@@ -33,7 +33,7 @@ export const updatePosition = () => {
 
 export const fillPositionsUpdateTpl = async (id) => {
     let { result } = await http({
-        url: 'api/positions/list_refill',
+        url: process.env.HEROKU_END_POINT+'api/positions/list_refill',
         type: 'post',
         data: {
             id

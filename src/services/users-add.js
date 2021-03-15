@@ -3,7 +3,7 @@ import http from '../utils/http'
 export const usersAdd = async (data) => {
     try {
         let {result} = await http({
-            url: '/api/users',
+            url: process.env.HEROKU_END_POINT+'/api/users',
             type: 'POST',
             data,
         })

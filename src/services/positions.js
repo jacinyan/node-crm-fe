@@ -3,7 +3,7 @@ import http from '../utils/http'
 export const positionsAdd = () => {
     return new Promise((resolve, reject) => {
         var options = {
-            url: "/api/positions/add", //default: form action; replaced by explicit statement
+            url: process.env.HEROKU_END_POINT+"/api/positions/add", //default: form action; replaced by explicit statement
             type: "post",   //default: get or post; replaced by explicit statement
             // beforeSubmit: beforeCheck, //callback before form submission
             success: (result) => {
@@ -26,7 +26,7 @@ export const positionsAdd = () => {
 export const positionsList = async () => {
     try {
         let { result } = await http({
-            url: '/api/positions/list',
+            url: process.env.HEROKU_END_POINT+'/api/positions/list',
         })
         return result
     } catch (error) {
@@ -37,7 +37,7 @@ export const positionsList = async () => {
 export const positionsUpdate = () => {
     return new Promise((resolve, reject) => {
         var options = {
-            url: "/api/positions/update", //default: form action; replaced by explicit statement
+            url: process.env.HEROKU_END_POINT+"/api/positions/update", //default: form action; replaced by explicit statement
             type: "patch",   //default: get or post; replaced by explicit statement
             // beforeSubmit: beforeCheck, //callback before form submission
             success: (result) => {

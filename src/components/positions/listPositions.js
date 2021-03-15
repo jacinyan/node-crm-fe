@@ -38,7 +38,7 @@ const listPositions = (router) => {
       remove({
         $box: $('#positions-list'),
         state,
-        url: '/api/positions/remove',
+        url: process.env.HEROKU_END_POINT+'/api/positions/remove',
         loadData: _loadData
       })
 

@@ -44,6 +44,7 @@ module.exports = {
     },
 
     plugins: [
+        new Dotenv(),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '/public/index.html'),
             filename: 'index.html',
@@ -71,16 +72,16 @@ module.exports = {
         new CleanWebpackPlugin()
     ],
     // webpack server
-    devServer: {
-        contentBase: path.join(__dirname, '/dist'),
-        compress: true,
-        port: 9000,
-        proxy: {
-            '/api': {
-                target: 'https://node-crm-be.herokuapp.com/',
-                "secure": false,
-                "changeOrigin": true
-            },
-        },
-    }
+    // devServer: {
+    //     contentBase: path.join(__dirname, '/dist'),
+    //     compress: true,
+    //     port: 9000,
+    //     proxy: {
+    //         '/api': {
+    //             target: 'https://node-crm-be.herokuapp.com/',
+    //             "secure": false,
+    //             "changeOrigin": true
+    //         },
+    //     },
+    // }
 }

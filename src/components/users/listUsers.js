@@ -34,7 +34,7 @@ const listUsers = (router) => {
             remove({
                 $box: $('#users-list'),
                 state,
-                url: '/api/users',
+                url: process.env.HEROKU_END_POINT+'/api/users',
                 loadData: _loadData
             })
 
