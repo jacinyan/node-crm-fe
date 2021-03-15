@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
 
     //sourceMap
     devtool: 'source-map',
@@ -40,7 +40,7 @@ module.exports = {
                 },
             ],
         }
-    ]
+        ]
     },
 
     plugins: [
@@ -77,7 +77,9 @@ module.exports = {
         port: 9000,
         proxy: {
             '/api': {
-                target: 'http://localhost:3000',
+                target: 'https://node-crm-be.herokuapp.com/',
+                "secure": false,
+                "changeOrigin": true
             },
         },
     }
