@@ -44,7 +44,9 @@ module.exports = {
     },
 
     plugins: [
-        new Dotenv(),
+        new Dotenv({
+            path:'./.env'
+        }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '/public/index.html'),
             filename: 'index.html',
